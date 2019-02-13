@@ -6,18 +6,18 @@
    <body> 
        <form name="f">
             Số đầu tiên:<br/>
-            <input name="a" type="text"/><br/>
+            <input name="a" type="text" id="id1"/><br/>
             Số thứ hai: <br/>
-            <input name="b" type="text"/><br/>
+            <input name="b" type="text" id="id2"/><br/>
             <div id="resultDiv"></div>
-            <input type="button" value="Tính tích" onclick="product()"/>
+            <input type="button" value="Tính tích" onclick="products()"/>
        </form>
       <script>
          function products(){
-             var a = parseInt(document.forms['f']['a'].value);
-             var b = parseInt(document.forms['f']['c'].value);
+             var a = parseInt(document.getElementById("id1").value);
+             var b = parseInt(document.getElementById("id2").value);
              var result = a * b;
-            document.getElementByIds("resultDiv").innerHTML = "Kết quả: " + result;
+            document.getElementById("resultDiv").innerHTML = "Kết quả: " + result;
          }
       </script>   
    </body>
